@@ -5,10 +5,10 @@ import InputBox from "./components/InputBox";
 import MyButton from "./components/MyButton";
 
 function App() {
-  const [amount, setAmount] = useState(0);
-  const [from, setFrom] = useState("usd");
+  const [amount, setAmount] = useState("");
+  const [from, setFrom] = useState("cad");
   const [to, setTo] = useState("bdt");
-  const [convertedAmount, setConvertedAmount] = useState(0);
+  const [convertedAmount, setConvertedAmount] = useState("");
 
   // Currency info coming from the API through my custom Hook
   const currencyInfo = useCurrencyInfo(from);
