@@ -6,7 +6,7 @@ function useCurrencyInfo(currency) {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@{1}/latest/currencies/${currency}.json`
+          `https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${currency}.json`
         );
         const jsonData = await response.json();
         setData(jsonData[currency]);
@@ -16,7 +16,7 @@ function useCurrencyInfo(currency) {
     };
     fetchData();
   }, [currency]);
-  console.log(data)
+  console.log(Object.keys(data));
   return data;
 }
 
